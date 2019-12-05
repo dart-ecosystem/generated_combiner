@@ -2,7 +2,7 @@ name: generated_locator
 description: >
   A helper generator creates index files for generators,
   in order to generate file in another folder.
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/dart-ecosystem/generated_locator.dart
 author: Copydog <775150@qq.com>
 
