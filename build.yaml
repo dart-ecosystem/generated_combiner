@@ -1,0 +1,16 @@
+builders:
+  generated_locator:
+    import: 'package:generated_locator/src/builder.dart'
+    builder_factories: ['generatedLocator']
+    build_extensions: { 'pubspec.yaml': ['.locator'] }
+    auto_apply: root_package
+    build_to: source
+    required_inputs: ['.extra_locator']
+    defaults:
+      options:
+        generate_path: lib/generated
+      generate_for:
+        include:
+          - pubspec.yaml
+        exclude:
+          - lib/**
