@@ -18,7 +18,7 @@ class LocatorBuilder extends Builder {
 
     final List<String> extraLocatorNames = await buildStep
         .findAssets(
-          Glob("**/*.extra_locator"),
+          Glob("*.extra_locator"),
         )
         .map((assetId) => assetId.pathSegments.last.replaceAll(".extra_locator", ""))
         .toList();
@@ -43,7 +43,7 @@ class LocatorBuilder extends Builder {
       baseFolder.createSync(recursive: true);
     }
 
-    var baseLocatorFile = File("$basePath/index.$locatorName.locator");
+    var baseLocatorFile = File("$basePath/$locatorName.locator");
     if (!baseLocatorFile.existsSync()) {
       baseLocatorFile.writeAsStringSync("// DO NOT DELETE THIS FILE!!");
     }
